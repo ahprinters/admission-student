@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\Student;
 
 class AdmissionWizard extends Component
 {
