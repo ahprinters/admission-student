@@ -125,7 +125,7 @@ class AdmissionWizard extends Component
                  $this->student_type = $student->student_type;
                  $this->admission_date = $student->admission_date;
                  $this->student_id = $student->id;
-                 $this->student_class_roll = $student->class_roll;
+                //  $this->student_class_roll = $student->class_roll;
                  $this->branch = $student->branch;
                  $this->name_bn = $student->name_bn;
                  $this->name_en = $student->name_en;
@@ -137,16 +137,13 @@ class AdmissionWizard extends Component
                  $this->religion = $student->religion;
                  $this->gender = $student->gender;
                  //load data form user table
-                 if ($student->user)
-                     {
-                     $this->name_en = $student->user->name;
-                     $this->user_photo = $student->user->profile_picture;
-                     $this->
-
-                 }
+                //  if ($student->user) {
+                //      $this->name_en = $student->user->name;
+                //      $this->user_photo = $student->user->profile_picture;
+                //  }
                  //guardian info
-                 }
-              }
+           }
+}
               // next step
 
 
@@ -201,12 +198,12 @@ public function downloadPdf()
     ];
 
     // PDF তৈরি করা হচ্ছে
-    $pdf = Pdf::loadView('pdf.admission-form', $data)
-              ->setPaper('legal', 'portrait');
+    // $pdf = Pdf::loadView('pdf.admission-form', $data)
+    //           ->setPaper('legal', 'portrait');
 
-    return response()->streamDownload(function () use ($pdf) {
-        echo $pdf->output();
-    }, 'admission-form.pdf');
+    // return response()->streamDownload(function () use ($pdf) {
+    //     echo $pdf->output();
+    // }, 'admission-form.pdf');
 }
         public function render()
     {
